@@ -7,12 +7,9 @@
 # pip3 install paramiko
 
 
+#!/usr/bin/python3
 import paramiko
-
 client = paramiko.SSHClient()
-
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
 client.connect('HOSTNAME or IP-address', username='NAME', password='*******')
-
 client.exec_command('sudo reboot')
